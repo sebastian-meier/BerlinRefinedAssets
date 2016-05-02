@@ -239,11 +239,11 @@ for(i = 0; i<categories.length; i++){
                                 "osm_moabit.addTo(moabit_map);"+"\n"+
                                 "var name = '"+((sources[j].technology.rechneradresse[0].split("/"))[(sources[j].technology.rechneradresse[0].split("/")).length-1])+"_';"+"\n"+
                                 "var southWest = L.latLng(52.51303464932938, 13.306503295898438),northEast = L.latLng(52.540971446408086, 13.349504470825195), moabit_bounds = L.latLngBounds(southWest, northEast);"+"\n"+
-                                "var moabit_overlay = L.imageOverlay('https://raw.githubusercontent.com/sebastian-meier/BerlinRefinedAssets/tools/fisbroker/moabit/'+name+'"+sources[j].technology.layers[0].name+".png', moabit_bounds);"+"\n"+
+                                "var moabit_overlay = L.imageOverlay('https://raw.githubusercontent.com/sebastian-meier/BerlinRefinedAssets/master/tools/fisbroker/moabit/'+name+'"+sources[j].technology.layers[0].name+".png', moabit_bounds);"+"\n"+
                                 "moabit_overlay.addTo(moabit_map);"+"\n"+
                                 "moabit_map.fitBounds(moabit_bounds);"+"\n"+
                                 "var southWest = L.latLng(52.3348, 13.0847),northEast = L.latLng(52.6854, 13.7607),berlin_bounds = L.latLngBounds(southWest, northEast);"+"\n"+
-                                "var berlin_overlay = L.imageOverlay('https://raw.githubusercontent.com/sebastian-meier/BerlinRefinedAssets/tools/fisbroker/moabit/berlin_'+name+'"+sources[j].technology.layers[0].name+".png', berlin_bounds);"+"\n"+
+                                "var berlin_overlay = L.imageOverlay('https://raw.githubusercontent.com/sebastian-meier/BerlinRefinedAssets/master/tools/fisbroker/moabit/berlin_'+name+'"+sources[j].technology.layers[0].name+".png', berlin_bounds);"+"\n"+
                                 "berlin_overlay.addTo(berlin_map);"+"\n"+
                                 "berlin_map.fitBounds(berlin_bounds);"+"\n"+
                                 "d3.select('img.legend#legend_"+sources[j].technology.layers[0].name+"').style('display','block');"+"\n";
@@ -253,9 +253,9 @@ for(i = 0; i<categories.length; i++){
                                     "var id = el.attr('data-layer');"+"\n"+
                                     "berlin_map.remove(berlin_overlay);"+"\n"+
                                     "moabit_map.remove(moabit_overlay);"+"\n"+
-                                    "moabit_overlay = L.imageOverlay('https://raw.githubusercontent.com/sebastian-meier/BerlinRefinedAssets/tools/fisbroker/moabit/'+name+id+'.png', moabit_bounds);"+"\n"+
+                                    "moabit_overlay = L.imageOverlay('https://raw.githubusercontent.com/sebastian-meier/BerlinRefinedAssets/master/tools/fisbroker/moabit/'+name+id+'.png', moabit_bounds);"+"\n"+
                                     "moabit_overlay.addTo(moabit_map);"+"\n"+
-                                    "berlin_overlay = L.imageOverlay('https://raw.githubusercontent.com/sebastian-meier/BerlinRefinedAssets/tools/fisbroker/moabit/berlin_'+name+id+'.png', berlin_bounds);"+"\n"+
+                                    "berlin_overlay = L.imageOverlay('https://raw.githubusercontent.com/sebastian-meier/BerlinRefinedAssets/master/tools/fisbroker/moabit/berlin_'+name+id+'.png', berlin_bounds);"+"\n"+
                                     "berlin_overlay.addTo(berlin_map);"+"\n"+
                                     "d3.selectAll('img.legend').style('display','none');"+"\n"+
                                     "d3.selectAll('img.legend.primary, img.legend#legend_'+id).style('display','block');"+"\n"+
@@ -270,7 +270,7 @@ for(i = 0; i<categories.length; i++){
                                 "function onEachFeature(feature, layer) {layer.bindPopup(JSON.stringify(feature.properties, null, 4));}"+"\n"+
                                 "var geojsonMarkerOptions = {radius: 5,fillColor: '#ff7800',color: '#000',weight: 1,opacity: 1,fillOpacity: 0.8};"+"\n"+
                                 "var name = '"+((sources[j].technology.rechneradresse[0].split("/"))[(sources[j].technology.rechneradresse[0].split("/")).length-1])+"';"+"\n"+
-                                "var geojsonLayer = new L.GeoJSON.AJAX('https://raw.githubusercontent.com/sebastian-meier/BerlinRefinedAssets/tools/fisbroker/moabit/'+name+'.min.geojson',{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, geojsonMarkerOptions);},onEachFeature: onEachFeature});"+"\n"+
+                                "var geojsonLayer = new L.GeoJSON.AJAX('https://raw.githubusercontent.com/sebastian-meier/BerlinRefinedAssets/master/tools/fisbroker/moabit/'+name+'.min.geojson',{pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, geojsonMarkerOptions);},onEachFeature: onEachFeature});"+"\n"+
                                 "geojsonLayer.addTo(moabit_map); console.log('hello world');"+"\n";
                     }
 
